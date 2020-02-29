@@ -6,12 +6,11 @@
 // This test has a problem with it -- make the test compile! Make the test
 // pass! Make the test fail! Execute `rustlings hint tests1` for hints :)
 
-// I AM NOT DONE
-
 #[cfg(test)]
 mod tests {
     #[test]
     fn you_can_assert() {
-        assert!();
+        let answer = 42;
+        assert!(answer == 42, "Answer {} doesn't equal 42", answer);
     }
 }
