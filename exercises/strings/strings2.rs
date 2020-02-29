@@ -2,11 +2,23 @@
 // Make me compile without changing the function signature!
 // Execute `rustlings hint strings2` for hints :)
 
-// I AM NOT DONE
-
 fn main() {
-    let word = String::from("green"); // Try not changing this line :)
-    if is_a_color_word(word) {
+    // Commented out so play with String methods.
+    // let word = String::from("green"); // Try not changing this line :)
+
+
+    // Create a growable mutable String variable
+    let mut word = String::new();
+    // use method to add a string slice
+    word.push_str("gr");
+
+    // using + syntax to concatinate the string;
+    word += "ee";
+
+    // using push `char` method.
+    word.push('n');
+
+    if is_a_color_word(&word) {
         println!("That is a color word I know!");
     } else {
         println!("That is not a color word I know.");
