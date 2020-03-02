@@ -5,8 +5,6 @@
 
 // Write a macro that passes the test! No hints this time, you can do it!
 
-// I AM NOT DONE
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -19,5 +17,14 @@ mod tests {
     #[test]
     fn test_my_macro_goodbye() {
         assert_eq!(my_macro!("goodbye!"), "Hello goodbye!");
+    }
+}
+
+mod macros {
+    #[macro_export]
+    macro_rules! my_macro {
+        ($val:expr) => {
+            format!("{} world", $val)
+        }
     }
 }
