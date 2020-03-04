@@ -4,11 +4,14 @@
 // Why not? What should we do to fix it?
 // Execute `rustlings hint errors3` for hints!
 
-// I AM NOT DONE
-
 use std::num::ParseIntError;
+use std::error::Error;
 
-fn main() {
+
+// V1
+// fn main() -> Result<(), ParseIntError>{
+// https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#the--operator-can-be-used-in-functions-that-return-result
+fn main() -> Result<(), Box<dyn Error>>{
     let mut tokens = 100;
     let pretend_user_input = "8";
 
@@ -20,6 +23,8 @@ fn main() {
         tokens -= cost;
         println!("You now have {} tokens.", tokens);
     }
+
+    Ok(())
 }
 
 pub fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
