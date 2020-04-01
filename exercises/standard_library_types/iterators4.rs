@@ -1,6 +1,16 @@
 // iterators4.rs
 
-// I AM NOT DONE
+// My original version
+// pub fn factorial(num: u64) -> u64 {
+//     if num == 1 {
+//         return num
+//     }
+//     let x_iter = 2..=num;
+//     let factorial = x_iter.fold(1, |acc, x| acc * x);
+//     factorial
+// }
+
+
 
 pub fn factorial(num: u64) -> u64 {
     // Complete this function to return factorial of num
@@ -12,6 +22,12 @@ pub fn factorial(num: u64) -> u64 {
     // For the most fun don't use:
     // - recursion
     // Execute `rustlings hint iterators4` for hints.
+
+    // this is what I used: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold
+    match num {
+        1 => { num },
+        _ => { (2..=num).fold(1, |acc, x| acc * x) }
+    }
 }
 
 #[cfg(test)]
