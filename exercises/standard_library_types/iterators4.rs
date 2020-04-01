@@ -10,6 +10,12 @@
 //     factorial
 // }
 
+// My version 2
+
+// match num {
+//     1 => { num },
+//     _ => { (1..=num).fold(1, |acc, x| acc * x) }
+// }
 
 
 pub fn factorial(num: u64) -> u64 {
@@ -24,10 +30,7 @@ pub fn factorial(num: u64) -> u64 {
     // Execute `rustlings hint iterators4` for hints.
 
     // this is what I used: https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.fold
-    match num {
-        1 => { num },
-        _ => { (2..=num).fold(1, |acc, x| acc * x) }
-    }
+    (1..=num).fold(1, |acc, x| acc * x)
 }
 
 #[cfg(test)]
