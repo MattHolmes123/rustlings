@@ -41,6 +41,20 @@ value. We can't print out something that isn't there; try giving x a value!
 This is an error that can cause bugs that's very easy to make in any
 programming language -- thankfully the Rust compiler has caught this for us!"""
 
+[[exercises]]
+name = "variables5"
+path = "exercises/variables/variables5.rs"
+mode = "compile"
+hint = """
+In variables3 we already learned how to make an immutable variable mutable
+using a special keyword. Unfortunately this doesn't help us much in this exercise
+because we want to assign a different typed value to an existing variable. Sometimes
+you may also like to reuse existing variable names because you are just converting
+values to different types like in this exercise.
+Fortunately Rust has a powerful solution to this problem: 'Shadowing'!
+You can read more about 'Shadowing' in the book's section 'Variables and Mutability'.
+Try to solve this exercise afterwards using this technique."""
+
 # IF
 
 [[exercises]]
@@ -355,7 +369,7 @@ The way macros are written, it wants to see something between each
 [[exercises]]
 name = "test4"
 path = "exercises/test4.rs"
-mode = "compile"
+mode = "test"
 hint = "No hints this time ;)"
 
 # MOVE SEMANTICS
@@ -515,6 +529,22 @@ hint = """
 It should be doing some checking, returning an `Err` result if those checks fail, and only
 returning an `Ok` result if those checks determine that everything is... okay :)"""
 
+#  CLIPPY
+
+[[exercises]]
+name = "clippy1"
+path = "exercises/clippy/clippy1.rs"
+mode = "clippy"
+hint = """
+Floating point calculations are usually imprecise, so asking if two values are exactly equal is asking for trouble"""
+
+[[exercises]]
+name = "clippy2"
+path = "exercises/clippy/clippy2.rs"
+mode = "clippy"
+hint = """
+`for` loops over Option values are more clearly expressed as an `if let`"""
+
 # STANDARD LIBRARY TYPES
 
 [[exercises]]
@@ -571,6 +601,28 @@ In an imperative language you might write a for loop to iterate through
 multiply the values into a mutable variable. Or you might write code more
 functionally with recursion and a match clause. But you can also use ranges
 and iterators to solve this in rust."""
+
+# TRAITS
+
+[[exercises]]
+name = "traits1"
+path = "exercises/traits/traits1.rs"
+mode = "test"
+hint = """
+A discussion about Traits in Rust can be found at:
+https://doc.rust-lang.org/book/ch10-02-traits.html
+"""
+
+[[exercises]]
+name = "traits2"
+path = "exercises/traits/traits2.rs"
+mode = "test"
+hint = """
+Notice how the trait takes ownership of 'self',and returns `Self'. 
+Try mutating the incoming string vector.
+
+Vectors provide suitable methods for adding an element at the end. See 
+the documentation at: https://doc.rust-lang.org/std/vec/struct.Vec.html"""
 
 # THREADS
 
