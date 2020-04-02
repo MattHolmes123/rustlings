@@ -24,7 +24,7 @@ mod macros {
     #[macro_export]
     macro_rules! my_macro {
         ($val:expr) => {
-            format!("{} world", $val)
+            format!("Hello {}", $val)
         }
     }
 }
